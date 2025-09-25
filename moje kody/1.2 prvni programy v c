@@ -1,0 +1,25 @@
+#include <stdio.h>
+ 
+int main() {
+    int cislo;
+ 
+    printf("Zadej kladne cele cislo: ");
+    scanf("%d", &cislo);
+ 
+    if (cislo <= 0) {
+        printf("Musis zadat kladne cislo!\n");
+        return 1;
+    }
+ 
+    printf("Delitele cisla %d jsou:\n", cislo);
+ 
+    for (int i = 1; i <= cislo; i++) {
+        if (cislo % i == 0) {
+            printf("%d ", i);
+        }
+    }
+ 
+    printf("\n");
+    return 0;
+}
+ 
