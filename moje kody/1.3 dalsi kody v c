@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main (){
+    int patra;
+    int znak;
+    
+    printf("Zadej pocet pater");
+    scanf("%d", &patra);
+    
+    printf("zadej znak ");
+    scanf(" %c", &znak);
+    
+    for(int i=0; i < patra; i++ ){
+        for(int j =0; j < (i+1); j++) {
+            printf ("%c", znak );
+            
+        }
+        printf("\n");
+}
+return 0;
+}
