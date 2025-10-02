@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int hodKostkou(int steny) {
+    return rand() % steny + 1;  
+}
+
+int main() {
+    int pocetKostek, pocetSten;
+    
+   
+    srand(time(NULL));
+    
+   
+    printf("Zadejte počet kostek: ");
+    scanf("%d", &pocetKostek);
+    
+    printf("Zadejte počet stěn kostky: ");
+    scanf("%d", &pocetSten);
+    
+   
+    if (pocetSten < 2) {
+        printf("Počet stěn kostky musí být alespoň 2.\n");
+        return 1;
+    }
+    
+    int soucet = 0;
+    printf("Výsledky hodů:\n");
+    
+  
+    for (int i = 1; i <= pocetKostek; i++) {
+        int vysledek = hodKostkou(pocetSten);
+        printf("Kostka %d: %d\n", i, vysledek);
+        soucet += vysledek;
+    }
+    
+    
+    printf("Součet všech hodů: %d\n", soucet);
+    
+    return 0;
+}
