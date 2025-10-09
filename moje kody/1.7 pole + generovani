@@ -5,8 +5,7 @@
 int main() {
     
     int pole[] = {10, 20, 30, 40, 50};
-    int velikost = (pole) / (pole[0]);
-
+    int velikost = 5;
     
     srand(time(NULL));
 

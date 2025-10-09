@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int znamky[10];
+    int i, soucet = 0;
+    int nejlepsi = 5, nejhorsi = 1;
+    int pocet[6] = {0}; // indexy 1–5
+    int nejcastejsi = 1;
+    int prumer, vysvedceni;
+
+    srand(time(NULL));
+
+    printf("Vygenerovane znamky:\n");
+    for (i = 0; i < 10; i++) {
+        znamky[i] = rand() % 5 + 1;
+        printf("%d ", znamky[i]);
+        soucet += znamky[i];
+
+        if (znamky[i] < nejlepsi) nejlepsi = znamky[i];
+        if (znamky[i] > nejhorsi) nejhorsi = znamky[i];
+
+        pocet[znamky[i]]++;
+    }
+
+    
+    prumer = soucet * 10 / 10; // jen pro přehlednost
+    vysvedceni = (soucet + 5) / 10; // přibližné zaokrouhlení
+
+    
+    for (i = 1; i <= 5; i++) {
+        if (pocet[i] > pocet[nejcastejsi]) {
+            nejcastejsi = i;
+        }
+    }
+
+    printf("\n\n--- Statistiky ---\n");
+    printf("Soucet: %d\n", soucet);
+    printf("Prumer (priblizne): %d\n", soucet / 10);
+    printf("Nejlepsi znamka: %d\n", nejlepsi);
+    printf("Nejhorsi znamka: %d\n", nejhorsi);
+    printf("Nejcastejsi znamka: %d\n", nejcastejsi);
+    printf("Znamka na vysvedceni: %d\n", vysvedceni);
+
+   
+
+    return 0;
+}
