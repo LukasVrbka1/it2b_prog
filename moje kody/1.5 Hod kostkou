@@ -14,20 +14,20 @@ int main() {
     srand(time(NULL));
     
    
-    printf("Zadejte počet kostek: ");
+    printf("Zadejte pocet kostek: ");
     scanf("%d", &pocetKostek);
     
-    printf("Zadejte počet stěn kostky: ");
+    printf("Zadejte pocet sten kostky: ");
     scanf("%d", &pocetSten);
     
    
     if (pocetSten < 2) {
-        printf("Počet stěn kostky musí být alespoň 2.\n");
+        printf("Pocet sten kostky musi byt alespon 2.\n");
         return 1;
     }
     
     int soucet = 0;
-    printf("Výsledky hodů:\n");
+    printf("Vysledky hodu:\n");
     
   
     for (int i = 1; i <= pocetKostek; i++) {
@@ -37,7 +37,7 @@ int main() {
     }
     
     
-    printf("Součet všech hodů: %d\n", soucet);
+    printf("Soucet vsech hodu: %d\n", soucet);
     
     return 0;
 }

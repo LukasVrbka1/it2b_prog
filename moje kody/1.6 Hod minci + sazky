@@ -1,0 +1,34 @@
+#include <stdio.h> 
+#include <time.h>
+#include <stdlib.h>
+
+
+int main (){
+    int mince ;
+    int tip   ;
+    printf ("tipni si hod (panna =1, orel = 0) ");
+    scanf("%d", &tip);
+
+    srand (time (NULL));
+    
+    
+    for (int i =0; i < 10; i++){
+        mince =rand()% 2;
+        
+        if (mince == 0){
+            printf("panna\n");
+        }
+        else {
+            printf("orel\n");
+        }
+    
+    if (tip== mince){
+        printf("vyhral si gratuluji ti \n");
+        
+    } else { 
+        printf ("prohral si\n");    
+        
+    }
+
+
+    }
