@@ -6,10 +6,10 @@ int main() {
     int znamky[10];
     int i, soucet = 0;
     int nejlepsi = 5, nejhorsi = 1;
-    int pocet[6] = {0}; // indexy 1–5
+    int pocet[6]; 
     int nejcastejsi = 1;
     int prumer, vysvedceni;
-
+    
     srand(time(NULL));
 
     printf("Vygenerovane znamky:\n");
@@ -25,8 +25,8 @@ int main() {
     }
 
     
-    prumer = soucet * 10 / 10; // jen pro přehlednost
-    vysvedceni = (soucet + 5) / 10; // přibližné zaokrouhlení
+    
+    vysvedceni = (soucet + 5) / 10; 
 
     
     for (i = 1; i <= 5; i++) {
@@ -37,7 +37,7 @@ int main() {
 
     printf("\n\n--- Statistiky ---\n");
     printf("Soucet: %d\n", soucet);
-    printf("Prumer (priblizne): %d\n", soucet / 10);
+    printf("prumer je %f\n", (float)soucet  / 10 ); 
     printf("Nejlepsi znamka: %d\n", nejlepsi);
     printf("Nejhorsi znamka: %d\n", nejhorsi);
     printf("Nejcastejsi znamka: %d\n", nejcastejsi);
