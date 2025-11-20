@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+ 
+int main() {
+    char heslo[100];
+    int delka;
+    int index;
+
+    int male_pismeno = 0;
+    int cislice = 0;
+    int specialni_znak = 0;
+    
+    int minimalni_delka = 8;
+ 
+    printf("Zadejte heslo ke kontrole (min. 8 znaku):\n");
+    scanf("%s", heslo);
+    
+    delka = strlen(heslo);
+    if (delka < minimalni_delka){
+        printf("Heslo není silné, zadejte silnější heslo.\n");
+        return 0;
+    }
+    
+    for (index = 0; index < delka; index++) {
+        char znak = heslo[index];
+
+        if (znak >= 'a' && znak <= 'z') {
+            male_pismeno++;
+        } else if (znak >= '0' && znak <= '9') {
+            cislice++;
+        } else if (znak == '!' || znak == '$' || znak == '×') {
+            specialni_znak++;
+        }
+    }
+    
+    if (male_pismeno >= 3 && cislice >= 1 && specialni_znak >= 1) {
+        printf("Heslo je SILNÉ.\n");
+    } else {
+        printf("Heslo není silné, zadejte silnější heslo.\n");
+    }
+
+    return 0;
+}

@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+ 
+int main() {
+    char slovo[100];
+    int delka;
+    int index;
+ 
+    printf("Zadejte prosim slovo:\n");
+    
+    scanf("%s", slovo);
+ 
+    printf("Slovo: %s\n", slovo);
+    printf("ASCII kody:\n");
+ 
+    delka = strlen(slovo);
+ 
+    for (index = 0; index < delka; index++) {
+        char znak = slovo[index];
+        
+        printf("%c=%d\n ", znak, znak);
+    }
+ 
+    printf("\n");
+ 
+    return 0;
+}
