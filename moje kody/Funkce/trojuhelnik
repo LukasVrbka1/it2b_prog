@@ -1,0 +1,14 @@
+#include <stdio.h>
+void trojuhelnik(int patra) {
+	for (int i = 0; i < patra; i++) {
+		
+		for (int j = 0; j < i+1; j++) {
+			printf("_");
+		}
+
+		printf("\n");
+	}
+}
+int main (){
+    trojuhelnik(67);
+        return 0;
