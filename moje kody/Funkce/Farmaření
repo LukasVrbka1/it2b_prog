@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+
+        Console.WriteLine("Zadejte celkový počet nohou zvířat:");
+        int celkovyPocetNoh = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Zadejte počet prasat:");
+        int pocetPrasat = int.Parse(Console.ReadLine());
+
+        int nohyPrasat = pocetPrasat * 4;
+        int nohyKureti = celkovyPocetNoh - nohyPrasat;
+        int pocetKureti = nohyKureti / 2;
+
+        Console.WriteLine("Na farmě je " + pocetKureti + " kuřat.");
+    }
+}
