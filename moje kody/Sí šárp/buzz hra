@@ -30,6 +30,7 @@ class Program
         }
 
         Console.ReadLine();
+        console.WriteLine("Konec programu");
     }
 }
 
